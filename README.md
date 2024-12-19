@@ -61,9 +61,6 @@ This extension contributes the following settings:
 * `systemctlManager.enableDebugLogs`: Enable/disable debug logging
 * `systemctlManager.autoRefreshInterval`: Set auto-refresh interval for service status
 
-## Known Issues
-
-See [GitHub Issues](https://github.com/your-username/vscode-systemctl/issues)
 
 ## Contributing
 
