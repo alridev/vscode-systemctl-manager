@@ -24,3 +24,5 @@ webpack.config.js
 .gitlab-ci.yml
 CHANGELOG.md
 CONTRIBUTING.md
+- media/**
++ !media/icons/systemctl.svg

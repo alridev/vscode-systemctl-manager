@@ -80,6 +80,21 @@
         "icon": "$(refresh)"
       },
       {
+        "command": "systemctl.createService",
+        "title": "Create New Service",
+        "icon": "$(add)"
+      },
+      {
+        "command": "systemctl.openConfig",
+        "title": "Open Configuration",
+        "icon": "$(gear)"
+      },
+      {
+        "command": "systemctl.reloadDaemon",
+        "title": "Reload Daemon",
+        "icon": "$(sync)"
+      },
+      {
         "command": "systemctl.startService",
         "title": "Start Service",
         "icon": "$(play)"

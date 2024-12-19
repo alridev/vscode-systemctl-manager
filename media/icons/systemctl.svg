@@ -1,10 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-    <path fill-rule="evenodd" clip-rule="evenodd" 
-          d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z" 
-          fill="currentColor"/>
-    <path fill-rule="evenodd" clip-rule="evenodd" 
-          d="M8 3.5a.75.75 0 01.75.75v3.5h3.5a.75.75 0 010 1.5h-4.25a.75.75 0 01-.75-.75V4.25A.75.75 0 018 3.5z" 
-          fill="currentColor"/>
-    <path d="M5.5 8a2.5 2.5 0 115 0 2.5 2.5 0 01-5 0z" 
-          fill="currentColor"/>
+<svg width="262" height="262" viewBox="0 0 262 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M151.032 130.5L262 69V192L151.032 130.5Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"  />
+    <path
+        d="M55.4841 185.85C86.1271 185.85 110.968 161.069 110.968 130.5C110.968 99.9311 86.1271 75.15 55.4841 75.15C24.8411 75.15 0 99.9311 0 130.5C0 161.069 24.8411 185.85 55.4841 185.85Z"
+        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" />
 </svg>

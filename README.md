@@ -65,17 +65,6 @@ This extension contributes the following settings:
 
 See [GitHub Issues](https://github.com/your-username/vscode-systemctl/issues)
 
-## Release Notes
-
-### 0.0.1
-
-Initial release:
-- Basic service management
-- Favorites support
-- Service logs viewing
-- Configuration editing
-- Status monitoring
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
