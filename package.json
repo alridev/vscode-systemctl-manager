@@ -1,0 +1,174 @@
+{
+  "name": "systemctl-manager",
+  "displayName": "Systemctl Manager",
+  "description": "A powerful systemd service manager for VS Code with favorites, status monitoring, and direct service control",
+  "publisher": "alridev",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alridev/vscode-systemctl-manager"
+  },
+  "bugs": {
+    "url": "https://github.com/alridev/vscode-systemctl-manager/issues"
+  },
+  "homepage": "https://github.com/alridev/vscode-systemctl-manager#readme",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "systemd",
+    "systemctl",
+    "linux",
+    "service",
+    "daemon",
+    "process",
+    "management"
+  ],
+  "icon": "media/icons/systemctl.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "preview": true,
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "badges": [
+    {
+      "url": "https://img.shields.io/github/license/your-username/vscode-systemctl",
+      "description": "License",
+      "href": "https://github.com/your-username/vscode-systemctl/blob/main/LICENSE"
+    }
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "systemctl-explorer",
+          "title": "Systemctl Manager",
+          "icon": "media/icons/systemctl.svg"
+        }
+      ]
+    },
+    "views": {
+      "systemctl-explorer": [
+        {
+          "id": "systemctlExplorer",
+          "name": "Systemctl Manager",
+          "contextualTitle": "Systemctl Manager",
+          "icon": "media/icons/systemctl.svg"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "systemctlExplorer",
+        "contents": "No services found or not running on Linux.\n[Refresh Services](command:systemctl.refreshServices)\n[Create New Service](command:systemctl.createService)",
+        "when": "isLinux"
+      }
+    ],
+    "commands": [
+      {
+        "command": "systemctl.refreshServices",
+        "title": "Refresh Services",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "systemctl.startService",
+        "title": "Start Service",
+        "icon": "$(play)"
+      },
+      {
+        "command": "systemctl.stopService",
+        "title": "Stop Service",
+        "icon": "$(stop)"
+      },
+      {
+        "command": "systemctl.restartService",
+        "title": "Restart Service",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "systemctl.toggleFavorite",
+        "title": "Toggle Favorite",
+        "icon": "$(star)"
+      },
+      {
+        "command": "systemctl.viewLogs",
+        "title": "View Logs",
+        "icon": "$(output)"
+      }
+    ],
+    "menus": {
+      "view/item/context": [
+        {
+          "command": "systemctl.startService",
+          "when": "view == systemctlExplorer && (viewItem == service || viewItem == service-favorite) && viewItem != separator",
+          "group": "inline"
+        },
+        {
+          "command": "systemctl.stopService",
+          "when": "view == systemctlExplorer && (viewItem == service || viewItem == service-favorite) && viewItem != separator",
+          "group": "inline"
+        },
+        {
+          "command": "systemctl.restartService",
+          "when": "view == systemctlExplorer && (viewItem == service || viewItem == service-favorite) && viewItem != separator",
+          "group": "inline"
+        },
+        {
+          "command": "systemctl.toggleFavorite",
+          "when": "view == systemctlExplorer && (viewItem == service || viewItem == service-favorite) && viewItem != separator",
+          "group": "inline"
+        },
+        {
+          "command": "systemctl.viewLogs",
+          "when": "view == systemctlExplorer && (viewItem == service || viewItem == service-favorite) && viewItem != separator",
+          "group": "inline"
+        },
+        {
+          "command": "systemctl.openConfig",
+          "when": "view == systemctlExplorer && (viewItem == service || viewItem == service-favorite)",
+          "group": "inline"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "systemctl.refreshServices",
+          "when": "view == systemctlExplorer",
+          "group": "navigation"
+        },
+        {
+          "command": "systemctl.createService",
+          "when": "view == systemctlExplorer",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "node ./out/test/runTest.js",
+    "test:unit": "mocha -r ts-node/register src/test/**/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.122",
+    "@types/vscode": "^1.80.0",
+    "@types/mocha": "^10.0.6",
+    "@types/chai": "^4.3.11",
+    "chai": "^4.4.1",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.4"
+  },
+  "author": "",
+  "license": "ISC"
+}

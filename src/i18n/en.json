@@ -1,0 +1,17 @@
+{
+  "views": {
+    "title": "Services",
+    "welcome": "No services found or not running on Linux.\n[Refresh Services](command:systemctl.refreshServices)\n[Create New Service](command:systemctl.createService)"
+  },
+  "commands": {
+    "refresh": "Refresh Services",
+    "create": "Create Service",
+    "start": "Start",
+    "stop": "Stop",
+    "restart": "Restart",
+    "favorite": "Toggle Favorite",
+    "logs": "View Logs",
+    "config": "Configuration",
+    "reload": "Reload Daemon"
+  }
+}

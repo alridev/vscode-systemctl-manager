@@ -1,0 +1,17 @@
+{
+  "views": {
+    "title": "Сервисы",
+    "welcome": "Сервисы не найдены или система не Linux.\n[Обновить список](command:systemctl.refreshServices)\n[Создать новый сервис](command:systemctl.createService)"
+  },
+  "commands": {
+    "refresh": "Обновить список",
+    "create": "Создать сервис",
+    "start": "Запустить",
+    "stop": "Остановить",
+    "restart": "Перезапустить",
+    "favorite": "В избранное",
+    "logs": "Логи",
+    "config": "Конфигурация",
+    "reload": "Перезагрузить демон"
+  }
+}
